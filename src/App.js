@@ -94,20 +94,22 @@ function App() {
 
         <p>
           <span style={{ marginRight: '10px' }}>Item name:</span>
-          <input type="text" onChange={(e) => setItemName(e.target.value)} value={itemName} />
+          <input type="text" onChange={(e) => setItemName(e.target.value)} value={itemName} style={{padding: '3px'}}/>
         </p>
 
         <p>
           <span style={{ marginRight: '10px' }}>Price per unit:</span>
-          <input type="text" onChange={(e) => setPricePerUnit(e.target.value)} value={pricePerUnit} />
+          <input type="text" onChange={(e) => setPricePerUnit(e.target.value)} value={pricePerUnit} style={{padding: '3px'}}/>
         </p>
 
         <p>
           <span style={{ marginRight: '10px' }}>Quantity:</span>
-          <input type="text" onChange={(e) => setQuantity(e.target.value)} value={quantity} />
+          <input type="text" onChange={(e) => setQuantity(e.target.value)} value={quantity} style={{padding: '3px'}}/>
         </p>
 
-        <button onClick={() => {
+        <button 
+        style={{padding: '3px'}}
+        onClick={() => {
 
           const itemToAdd = {
             itemName,
@@ -139,9 +141,9 @@ function App() {
         <div>
           <p>
             <span style={{ marginRight: '10px' }}>Tax percentage (on subtotal):</span>
-            <input type="text" onChange={(e) => setNewTaxPercentage(e.target.value)} value={newTaxPercentage} style={{ width: '70px' }}/>
+            <input type="text" onChange={(e) => setNewTaxPercentage(e.target.value)} value={newTaxPercentage} style={{ width: '70px', padding:'3px' }}/>
 
-            <button style={{ marginLeft: '10px' }}
+            <button style={{ marginLeft: '10px', padding: '3px' }}
               onClick={() => {
                 setSavedTaxPercentage(newTaxPercentage) // updating this value in state will call calculateTotal bc of useEffect
                 // save to db - only change tax, rest should remain the same
@@ -155,9 +157,9 @@ function App() {
 
           <p>
             <span style={{ marginRight: '10px' }}>Discount percentage (on subtotal):</span>
-            <input type="text" onChange={(e) => setNewDiscountPercentage(e.target.value)} value={newDiscountPercentage} style={{ width: '70px' }}/>
+            <input type="text" onChange={(e) => setNewDiscountPercentage(e.target.value)} value={newDiscountPercentage} style={{ width: '70px', padding: '3px'}}/>
 
-            <button style={{ marginLeft: '10px' }}
+            <button style={{ marginLeft: '10px', padding: '3px'}}
               onClick={() => {
                 setSavedDiscountPercentage(newDiscountPercentage)// updating this value in state will call calculateTotal bc of useEffect 
                 // save to db - only change discount, rest should remain the same
@@ -199,7 +201,9 @@ function App() {
                     <td>{item.quantity}</td>
                     <td>{itemTotal}</td>
                     <td>
-                      <button onClick={() => {
+                      <button
+                        style={{padding: '3px'}}
+                        onClick={() => {
                         const itemToRemove = JSON.parse(JSON.stringify(item)) // deep copy 
                         const newItems = allItems.filter((currentItem) => {
                           // if all values are the same - don't want this item
@@ -246,6 +250,7 @@ function App() {
             <span>Total: </span> <span>{total}</span>
           </p>
           <button
+            style={{padding: '3px'}}
             onClick={() => {
               const newDiscountPercentage = 0;
               const newTaxPercentage = 0;
@@ -256,6 +261,7 @@ function App() {
               setAllItems(newAllItems);
 
               // updateFirestoreData(newAllItems, newDiscountPercentage, newTaxPercentage);
+              
             }}>
             Reset All Data
       </button>
