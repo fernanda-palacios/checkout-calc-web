@@ -131,9 +131,11 @@ function App() {
       </div>
 
       <div style={{ marginLeft: '30px', marginTop: '50px' }}>
-
-        <h2>Price Checkout Calculator</h2>
-
+        <div style={{display: 'flex', alignItems:'center'}}>
+          <h2>Price Checkout Calculator</h2>
+          <img src="calc.png" style={{width: '20px', height: '20px', marginLeft: '10px'}}></img>
+        </div>
+        
         <div>
           <p>
             <span style={{ marginRight: '10px' }}>Tax percentage (on subtotal):</span>

@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+div, button, p, input{
+    color: #c99789;
+    font-weight: 500;
+}
+
+  button, input{
+    border-color:grey;
+    border-radius: 5px; 
+    box-shadow: none;
+    border-style: solid;
+    border-width: 1px;
+    background-color: white;
+  }
+
+  button {
+    cursor:pointer
+  }
