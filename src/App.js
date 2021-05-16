@@ -239,11 +239,11 @@ function App() {
           </p>
 
           <p>
-            <span>Currently applied tax percentage: </span> <span>{savedTaxPercentage}</span>
+            <span>Applied tax percentage: </span> <span>{savedTaxPercentage}</span>
           </p>
 
           <p>
-            <span>Currently applied discount percentage: </span> <span>{savedDiscountPercentage}</span>
+            <span>Applied discount percentage: </span> <span>{savedDiscountPercentage}</span>
           </p>
 
           <p style={{ fontWeight: 'bold' }}>
