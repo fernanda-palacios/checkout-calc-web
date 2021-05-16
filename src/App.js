@@ -173,7 +173,7 @@ function App() {
         </div>
 
         <div>
-          <hr />
+          <hr style={{marginRight: '550px'}} />
 
           <table style={{ width: '50%' }}>
             <tbody>
@@ -233,7 +233,7 @@ function App() {
 
 
         <div>
-          <hr />
+        <hr style={{marginRight: '550px'}} />
           <p>
             <span>Subtotal: </span> <span>{subtotal}</span>
           </p>
