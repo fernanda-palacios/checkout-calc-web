@@ -1,6 +1,6 @@
-# A checkout calculator
+# A checkout calculator web app
 
-## Local development
+### Local development
 - `yarn`
 - `yarn start` (opens app in http://localhost:3000/)
 
